@@ -15,11 +15,19 @@ def dictionary
 end
 
 def word_substituter(tweet)
+<<<<<<< HEAD
   tweet.split(" ").collect do |key| #splite tweet into array of strings and collect that array and yield to block
       if dictionary.keys.include?(key.downcase) # if word in array is included in dictionary then return true  
         key = dictionary[key.downcase] # for words in array that return true, replace with value of included dictionary key  
       else
         key # return new array 
+=======
+  tweet.split(" ").collect do |key|
+      if dictionary.keys.include?(key.downcase)
+        key = dictionary[word.downcase]
+      else
+        key
+>>>>>>> 0d7690c7481011aef65812ad09e5be699b4d2b76
     end
   end.join(" ") #convert returned array into string with a space between each word 
 end
